@@ -1,0 +1,57 @@
+######################
+# Intellij
+######################
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+classes/
+out/
+
+######################
+# Maven
+######################
+.mvn
+/target/
+
+######################
+# Package Files
+######################
+*.jar
+
+######################
+# Mac OS
+######################
+.DS_Store
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+######################
+# Directories
+######################
+/bin/
+/deploy/
+
+######################
+# Logs
+######################
+*.log*
+
+######################
+# Others
+######################
+*.class
+*.*~
+*~
+.merge_file*
+
+######################
+# Maven Wrapper
+######################
+.mvn/wrapper/maven-wrapper.jar
+.mvn/**
+

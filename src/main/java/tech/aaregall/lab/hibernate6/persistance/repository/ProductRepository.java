@@ -4,13 +4,11 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
 import tech.aaregall.lab.hibernate6.persistance.entity.Product;
 
 import java.util.Collection;
 import java.util.UUID;
 
-@Repository
 public interface ProductRepository extends CrudRepository<Product, UUID>, JpaSpecificationExecutor<Product> {
 
     /*

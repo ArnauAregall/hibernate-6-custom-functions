@@ -11,7 +11,7 @@ import java.util.List;
 
 class ArrayContainsSQLFunction extends StandardSQLFunction {
 
-    public ArrayContainsSQLFunction(final String functionName) {
+    ArrayContainsSQLFunction(final String functionName) {
         super(functionName, true, new BasicTypeReference<>("boolean", Boolean.class, SqlTypes.BOOLEAN));
     }
 

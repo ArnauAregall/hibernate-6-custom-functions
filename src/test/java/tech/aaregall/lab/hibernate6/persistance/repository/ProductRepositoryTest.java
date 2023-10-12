@@ -25,11 +25,11 @@ class ProductRepositoryTest {
 	@Test
 	void findAllByTagsContaining() {
 		productRepository.saveAll(List.of(
-				new Product("sku-111", "Product 111 Test", 99.99f, new String[] {"foo", "bar"}),
-				new Product("sku-222", "Product 222 Test", 99.99f, new String[] {"foo", "baz"})
+				new Product("sku-111", "Dog Food", 30.99f, new String[] {"pets", "home", "dogs", "animals"}),
+				new Product("sku-222", "Smart TV", 899.99f, new String[] {"electronics", "home"})
 		));
 
-		final Collection<Product> result = productRepository.findAllByTagsContaining("baz");
+		final Collection<Product> result = productRepository.findAllByTagsContaining("electronics");
 
 		assertThat(result)
 				.hasSize(1)
@@ -40,11 +40,11 @@ class ProductRepositoryTest {
 	@Test
 	void findAllByTagsContaining_Specification() {
 		productRepository.saveAll(List.of(
-				new Product("sku-333", "Product 333 Test", 99.99f, new String[] {"foo", "bar"}),
-				new Product("sku-444", "Product 444 Test", 99.99f, new String[] {"foo", "baz"})
+				new Product("sku-333", "Running Shoes", 64.55f, new String[] {"sport", "running", "footing"}),
+				new Product("sku-444", "Swimsuit", 30.99f, new String[] {"sport", "swimming", "water polo"})
 		));
 
-		final Collection<Product> result = productRepository.findAllByTagsContaining_Specification("baz");
+		final Collection<Product> result = productRepository.findAllByTagsContaining_Specification("swimming");
 
 		assertThat(result)
 				.hasSize(1)

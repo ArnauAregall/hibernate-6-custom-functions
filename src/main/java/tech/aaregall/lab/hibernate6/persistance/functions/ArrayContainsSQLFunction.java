@@ -11,8 +11,10 @@ import java.util.List;
 
 class ArrayContainsSQLFunction extends StandardSQLFunction {
 
+    private static final BasicTypeReference<Boolean> RETURN_TYPE = new BasicTypeReference<>("boolean", Boolean.class, SqlTypes.BOOLEAN);
+
     ArrayContainsSQLFunction(final String functionName) {
-        super(functionName, true, new BasicTypeReference<>("boolean", Boolean.class, SqlTypes.BOOLEAN));
+        super(functionName, true, RETURN_TYPE);
     }
 
     @Override

@@ -11,26 +11,19 @@ import java.util.UUID;
 
 public interface ProductRepository extends CrudRepository<Product, UUID>, JpaSpecificationExecutor<Product> {
 
-    /*
-     * org.hibernate.query.SemanticException: Operand of 'member of' operator must be a plural path
-     */
-    //Collection<Product> findAllByTagsContaining(String tag);
-
-    /*
-     * org.hibernate.query.SemanticException: Non-boolean expression used in predicate context: array_contains(p.tags,:tag)
-     * Requires FunctionContributor
-     */
+    // HQL
     @Query("select p from Product p where array_contains(p.tags, :tag)")
     Collection<Product> findAllByTagsContaining(@Param("tag") String tag);
 
+    // JPA specification
     default Collection<Product> findAllByTagsContaining_Specification(final String tag) {
         return findAll((root, criteriaQuery, criteriaBuilder) ->
                 criteriaBuilder.isTrue(
                         criteriaBuilder.function("array_contains", Boolean.class,
-                                root.get("tags").as(String[].class), criteriaBuilder.literal(tag))
+                                root.get("tags").as(String[].class),
+                                criteriaBuilder.literal(tag))
                 )
         );
     }
-
 
 }

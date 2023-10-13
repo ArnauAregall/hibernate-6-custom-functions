@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hibernate_6_custom_functions
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lab
+    username: postgres
+    password: postgres
+
+  jpa:
+    properties:
+      hibernate:
+        default_schema: ${spring.application.name}
+
+  flyway:
+    default-schema: ${spring.application.name}

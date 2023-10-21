@@ -1,4 +1,4 @@
-package tech.aaregall.lab.hibernate6.persistance.entity;
+package tech.aaregall.lab.hibernate6.persistence.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

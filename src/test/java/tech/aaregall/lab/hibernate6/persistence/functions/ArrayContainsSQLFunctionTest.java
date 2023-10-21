@@ -1,4 +1,4 @@
-package tech.aaregall.lab.hibernate6.persistance.functions;
+package tech.aaregall.lab.hibernate6.persistence.functions;
 
 import org.hibernate.dialect.PostgreSQLDialect;
 import org.hibernate.dialect.PostgreSQLSqlAstTranslator;

@@ -1,10 +1,10 @@
-package tech.aaregall.lab.hibernate6.persistance.repository;
+package tech.aaregall.lab.hibernate6.persistence.repository;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import tech.aaregall.lab.hibernate6.persistance.entity.Product;
+import tech.aaregall.lab.hibernate6.persistence.entity.Product;
 
 import java.util.Collection;
 import java.util.List;

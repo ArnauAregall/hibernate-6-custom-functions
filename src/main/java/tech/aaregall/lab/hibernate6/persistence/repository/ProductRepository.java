@@ -1,10 +1,10 @@
-package tech.aaregall.lab.hibernate6.persistance.repository;
+package tech.aaregall.lab.hibernate6.persistence.repository;
 
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
-import tech.aaregall.lab.hibernate6.persistance.entity.Product;
+import tech.aaregall.lab.hibernate6.persistence.entity.Product;
 
 import java.util.Collection;
 import java.util.UUID;
